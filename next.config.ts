@@ -8,8 +8,8 @@ const nextConfig: NextConfig = {
       {
         protocol: "http",
         hostname: "samawabackend.test",
-        port: "", // kosongkan kalau tidak ada port
-        pathname: "/api/**", // izinkan semua path
+        port: "", 
+        pathname: "/api/**", 
       },
     ],
   },
