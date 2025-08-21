@@ -3,16 +3,18 @@
 @tailwind utilities;
 
 .card-slide-content {
-  @apply bg-light1 rounded-3xl absolute top-1/2 z-10 p-5 max-w-[305px] transition-all opacity-0;
-  left: 100%;
+  @apply bg-light1 rounded-3xl absolute top-1/2 z-10 p-5 min-w-[356px] transition-all opacity-0;
+  /* awalnya sembunyi di kanan */
   transition-duration: 1000ms;
   transform: translateY(-45%) rotate3d(1, 0, 0, -20deg);
 }
 
 .swiper-slide-active .card-slide-content {
   @apply opacity-100;
+  left: 5%; /* atau 0 biar nempel */
   transform: translateY(-50%) rotate3d(1, 1, 1, 0deg);
 }
+
 
 input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-calendar-picker-indicator {

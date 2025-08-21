@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-import { config } from "process";
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -7,9 +6,9 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "http",
-        hostname: "samawabackend.test",
-        port: "", 
-        pathname: "/api/**", 
+        hostname: "127.0.0.1",
+        port: "8000",
+        pathname: "/**",
       },
     ],
   },
@@ -17,7 +16,7 @@ const nextConfig: NextConfig = {
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack'],
-    });
+    }); 
 
     return config;
   }
