@@ -5,7 +5,6 @@ import thousands from '@/libs/thousands';
 import { Metadata, ResolvingMetadata } from 'next';
 import Link from 'next/link';
 import React from 'react'
-import Image from 'next/image';
 import Slides from './slides';
 import { Content as ContentBonus } from '@/components/bonus';
 
@@ -168,7 +167,10 @@ async function PackageDetailsPage({ params }: Request) {
                             <h6 className="font-bold text-xl">Bonus Included</h6>
                             {
                                 details.weddingBonusPackages.map(bonus => {
-                                    return <ContentBonus key={bonus.id} data={bonus.bonusPackage} />
+                                    return <ContentBonus
+                                        slugPackage={details.slug}
+                                        key={bonus.id}
+                                        data={bonus.bonusPackage} />
                                 })
                             }
                         </div>
